@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .plans {
+            width: 560px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            padding: 15px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .plan {
+            background: #ddd;
+            padding: 10px;
+            float: left;
+            margin: 0 10px;
+            width: 42%;
+            position: relative;
+        }
+
+        .plan .title {
+            font-size: 20px;
+            text-align: center;
+            padding: 8px;
+            background: aqua;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .plan .price {
+            width: 100%;
+            height: 184px;
+            text-align: center;
+            font-size: 35px;
+            color: #000;
+            background: azure;
+            vertical-align: middle;
+            line-height: 184px;
+            border-radius: 50%;
+        }
+
+        .plan:first-child::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: -11px;
+            width: 2px;
+            height: 100%;
+            background: blue;
+        }
+
+        .plan:first-child::after {
+            content: "or";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            text-align: center;
+            background-color: blue;
+            color: #fff;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="plans">
+        <div class="plan">
+            <div class="title">basic</div>
+            <div class="price">free</div>
+        </div>
+        <div class="plan">
+            <div class="title">pro</div>
+            <div class="price">30$</div>
+        </div>
+    </div>
+</body>
+</html>

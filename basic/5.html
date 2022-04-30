@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #03A9F4;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        div:first-letter {
+            text-transform: uppercase;
+        }
+
+        div::before , div::after {
+            border-radius: inherit;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 0px;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            content: " ";
+        }
+
+        div::before {
+            color: #03A9F4;
+            z-index: -1;
+            border: 10px solid;
+            border-left-color: transparent;
+            transition: all .5s ease-in-out;
+        }
+
+        div:hover::before {
+            transform: rotate(360deg);
+        }
+
+        div:hover::after {
+            transform: rotate(360deg);
+        }
+
+        div::after {
+            color: #E91E63;
+            z-index: -2;
+            border: 10px solid;
+            width: 220px;
+            height: 220px;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-right-color: transparent;
+            transition: all .5s ease-in-out;
+            transition-delay: .5s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>Elzero</div>
+</body>
+</html>

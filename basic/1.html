@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assgin[1]</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            float: left;
+            counter-increment: count;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 10px 2px 0px 0px #2196f3, -7px -5px 1px 4px #e91e63;
+            background-color: #ddd;
+        }
+
+        div::before {
+            content: counter(count);
+            background: #000;
+            padding: 10px;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+            top: -10px;
+        }
+
+        div::after {
+            content: "Element";
+            display: block;
+            position: relative;
+            top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
